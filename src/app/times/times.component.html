@@ -1,0 +1,5 @@
+<div class="buttons">
+  <button *ngFor="let timeZone of timeZones; index as i" [ngClass]="{'active': timeZone.active}" (click)="changeTime(timeZone.time, i)">{{timeZone.label}}</button>
+  <button (click)="clearTime()">Clear</button>
+  <h1 *ngIf="showTime">{{time | date:'medium'}}</h1>
+</div>
